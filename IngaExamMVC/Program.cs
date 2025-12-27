@@ -1,7 +1,13 @@
+using IngaExamMVC.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<UniversityContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("UniversityDB")));
+
 
 var app = builder.Build();
 

@@ -1,0 +1,21 @@
+﻿@model Enrollment
+
+<h2>Зарахувати студента на курс</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label>Студент</label>
+        <select asp-for="StudentId" asp-items="ViewBag.Students" class="form-control"></select>
+        <br>
+    </div>
+
+    <div>
+        <label>Курс</label>
+        <select asp-for="CourseId" asp-items="ViewBag.Courses" class="form-control"></select>
+        <br>
+    </div>
+    
+    <button class="=btn btn-success">Обрати курс</button>
+    
+</form>

@@ -1,0 +1,10 @@
+﻿@model Student
+
+<h2>Видалити студента</h2>
+
+<p>Ви дійсно хочете видалити цього студента - <b>@Model.FirstName @Model.LastName</b>?</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id"/>
+    <button class="btn btn-danger">Видалити</button>
+</form>

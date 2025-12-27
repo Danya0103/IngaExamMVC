@@ -1,0 +1,38 @@
+﻿@model Student 
+
+<h2>Додати студента</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label>Ім'я</label> 
+        <input asp-for="FirstName">
+        <span asp-validation-for="FirstName"></span>
+        <br>
+    </div>
+    
+    <div>
+        <label>Прізвище</label> 
+        <input asp-for="LastName">
+        <span asp-validation-for="LastName"></span>
+        <br>
+    </div>
+
+    <div>
+        <label>Пошта</label> 
+        <input asp-for="Email">
+        <span asp-validation-for="Email"></span>
+        <br>
+    </div>
+    
+    <div>
+        <label>Дата народження</label> 
+        <input asp-for="DateOfBirth">
+        <span asp-validation-for="DateOfBirth"></span>
+        <br>
+    </div>
+
+    <button class="=btn btn-success">Зарахуватись</button>
+    
+</form>
+

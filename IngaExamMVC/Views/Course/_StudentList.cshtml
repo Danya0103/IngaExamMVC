@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Student>
+
+<ul>
+    @foreach (var student in Model)
+    {
+        <li>Student: @student.FirstName @student.LastName E-mail: @student.Email</li><br/>
+    }
+</ul>

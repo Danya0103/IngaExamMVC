@@ -1,0 +1,37 @@
+﻿@model Student 
+
+<h2>Редагувати студента</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id">
+    <div>
+        <label>Ім'я</label> 
+        <input asp-for="FirstName">
+        <span asp-validation-for="FirstName"></span>
+        <br>
+    </div>
+    
+    <div>
+        <label>Прізвище</label> 
+        <input asp-for="LastName">
+        <span asp-validation-for="LastName"></span>
+        <br>
+    </div>
+
+    <div>
+        <label>Пошта</label> 
+        <input asp-for="Email">
+        <span asp-validation-for="Email"></span>
+        <br>
+    </div>
+    
+    <div>
+        <label>Дата народження</label> 
+        <input asp-for="DateOfBirth">
+        <span asp-validation-for="DateOfBirth"></span>
+        <br>
+    </div>
+
+    <button class="=btn btn-success">Зберегти зміни</button>
+    
+</form>

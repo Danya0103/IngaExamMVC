@@ -1,0 +1,10 @@
+﻿@model Student
+
+<h2>Деталі студента</h2>
+
+<p>Ім'я та прізвище: @Model.FirstName @Model.LastName</p>
+<p>Пошта: @Model.Email</p>
+<p>Дата народження: @Model.DateOfBirth.ToShortDateString()</p>
+
+<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> 
+<a asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
