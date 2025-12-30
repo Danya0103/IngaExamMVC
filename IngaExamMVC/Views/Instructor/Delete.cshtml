@@ -1,18 +1,10 @@
-﻿@model TModel
+﻿@model Instructor
 
-@{
-    Layout = null;
-}
+<h2>Видалити викладача</h2>
 
-<!DOCTYPE html>
+<p>Ви дійсно хочете видалити цього викладача - <b>@Model.FirstName @Model.LastName</b>?</p>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id"/>
+    <button class="btn btn-danger">Видалити</button>
+</form>

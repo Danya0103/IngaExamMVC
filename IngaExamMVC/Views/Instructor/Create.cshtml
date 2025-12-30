@@ -1,18 +1,37 @@
-﻿@model TModel
+﻿@model Instructor 
 
-@{
-    Layout = null;
-}
+<h2>Додати викладача</h2>
 
-<!DOCTYPE html>
+<form asp-action="Create" method="post">
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+    <div>
+        <label>Ім'я</label> 
+        <input asp-for="FirstName">
+        <span asp-validation-for="FirstName"></span>
+        <br>
+    </div>
+    
+    <div>
+        <label>Прізвище</label> 
+        <input asp-for="LastName">
+        <span asp-validation-for="LastName"></span>
+        <br>
+    </div>
+
+    <div>
+        <label>Пошта</label> 
+        <input asp-for="Email">
+        <span asp-validation-for="Email"></span>
+        <br>
+    </div>
+    
+    <div>
+        <label>Кафедра</label> 
+        <input asp-for="Departament">
+        <span asp-validation-for="Departament"></span>
+        <br>
+    </div>
+
+    <button class="=btn btn-success">Влаштуватись</button>
+    
+</form>

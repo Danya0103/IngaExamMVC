@@ -1,18 +1,35 @@
-﻿@model TModel
-
+﻿@model IEnumerable<Instructor>
 @{
-    Layout = null;
+    ViewData["Title"] = "Instructors";
 }
 
-<!DOCTYPE html>
+<h2>Викладачі</h2>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+<form method="get" class="mb-3">
+    <input name="search"
+           class="form-control"
+           placeholder="Search by name or email" />
+</form>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Ім'я</th>
+        <th>Пошта</th>
+        <th></th>
+    </tr>
+
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.FirstName @s.LastName</td>
+            <td>@s.Email</td>
+            <td>
+                <a asp-action="Info" asp-route-id="@s.Id">Деталі</a> |
+                <a asp-action="Edit" asp-route-id="@s.Id">Редагування</a> |
+                <a asp-action="Delete" asp-route-id="@s.Id">Видалення</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Додати викладача</a>

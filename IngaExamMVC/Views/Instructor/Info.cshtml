@@ -1,18 +1,11 @@
-﻿@model TModel
+﻿@model Instructor
 
-@{
-    Layout = null;
-}
+<h2>Деталі викладача</h2>
 
-<!DOCTYPE html>
+<p>Ім'я та прізвище: @Model.FirstName @Model.LastName</p>
+<p>Пошта: @Model.Email</p>
+<!---TODO--->
+<p>Кафедра: @Model.Departament.()</p>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+<a asp-action="Edit" asp-route-id="@Model.Id">Редагування</a> 
+<a asp-action="Delete" asp-route-id="@Model.Id">Видалення</a>

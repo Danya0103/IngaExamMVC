@@ -3,7 +3,7 @@
     ViewData["Title"] = "Students";
 }
 
-<h2>Students</h2>
+<h2>Студенти</h2>
 
 <form method="get" class="mb-3">
     <input name="search"
@@ -13,8 +13,8 @@
 
 <table class="table table-bordered">
     <tr>
-        <th>Name</th>
-        <th>Email</th>
+        <th>Ім'я</th>
+        <th>Пошта</th>
         <th></th>
     </tr>
 
@@ -24,12 +24,12 @@
             <td>@s.FirstName @s.LastName</td>
             <td>@s.Email</td>
             <td>
-                <a asp-action="Info" asp-route-id="@s.Id">Details</a> |
-                <a asp-action="Edit" asp-route-id="@s.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@s.Id">Delete</a>
+                <a asp-action="Info" asp-route-id="@s.Id">Деталі</a> |
+                <a asp-action="Edit" asp-route-id="@s.Id">Редагування</a> |
+                <a asp-action="Delete" asp-route-id="@s.Id">Видалення</a>
             </td>
         </tr>
     }
 </table>
 
-<a asp-action="Create" class="btn btn-primary">Add Student</a>
+<a asp-action="Create" class="btn btn-primary">Додати студента</a>

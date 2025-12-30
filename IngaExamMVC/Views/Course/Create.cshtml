@@ -1,18 +1,30 @@
-﻿@model TModel
+﻿@model Course 
 
-@{
-    Layout = null;
-}
+<h2>Додати курс</h2>
 
-<!DOCTYPE html>
+<form asp-action="Create" method="post">
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+    <div>
+        <label>Назва</label> 
+        <input asp-for="Title">
+        <span asp-validation-for="Title"></span>
+        <br>
+    </div>
+    
+    <div>
+        <label>Опис</label> 
+        <input asp-for="Description">
+        <span asp-validation-for="Description"></span>
+        <br>
+    </div>
+
+    <div>
+        <label>?Кредити?</label> 
+        <input asp-for="Credits">
+        <span asp-validation-for="Credits"></span>
+        <br>
+    </div>
+
+    <button class="=btn btn-success">Створити курс</button>
+    
+</form>
