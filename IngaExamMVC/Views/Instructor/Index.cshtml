@@ -18,15 +18,15 @@
         <th></th>
     </tr>
 
-    @foreach (var s in Model)
+    @foreach (var i in Model)
     {
         <tr>
-            <td>@s.FirstName @s.LastName</td>
-            <td>@s.Email</td>
+            <td>@i.FirstName @i.LastName</td>
+            <td>@i.Email</td>
             <td>
-                <a asp-action="Info" asp-route-id="@s.Id">Деталі</a> |
-                <a asp-action="Edit" asp-route-id="@s.Id">Редагування</a> |
-                <a asp-action="Delete" asp-route-id="@s.Id">Видалення</a>
+                <a asp-action="Info" asp-route-id="@i.Id">Деталі</a> |
+                <a asp-action="Edit" asp-route-id="@i.Id">Редагування</a> |
+                <a asp-action="Delete" asp-route-id="@i.Id">Видалення</a>
             </td>
         </tr>
     }

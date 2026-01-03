@@ -24,6 +24,11 @@
       <_ContentIncludedByDefault Remove="Views\Edit\Edit.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Index\Index.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Info\Info.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\University\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\University\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\University\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\University\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\University\Info.cshtml" />
     </ItemGroup>
 
 </Project>
