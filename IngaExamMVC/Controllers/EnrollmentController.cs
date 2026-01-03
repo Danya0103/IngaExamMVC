@@ -18,7 +18,7 @@ public class EnrollmentController : Controller
     public IActionResult Create()
     {
         ViewBag.Students = new SelectList(_context.Students, "Id", "Email");
-        ViewBag.Course = new SelectList(_context.Courses, "Id", "Title");
+        ViewBag.Courses = new SelectList(_context.Courses, "Id", "Title");
         return View();
     }
     
@@ -26,15 +26,14 @@ public class EnrollmentController : Controller
     [HttpPost]
     public IActionResult Create(Enrollment enrollment)
     {
-        if (ModelState.IsValid)
-        {
+        //if (ModelState.IsValid)
+        //{
             _context.Enrollments.Add(enrollment);
             _context.SaveChanges();
             
-            //TODO
             return RedirectToAction("Index", "Course");
-        }
+        //}
 
-        return View(enrollment);
+        //return View(enrollment);
     }
 }

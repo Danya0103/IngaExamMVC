@@ -13,7 +13,6 @@ public class UniversityContext : DbContext
     public DbSet<Instructor> Instructors { get; set; }
     public DbSet<Enrollment> Enrollments { get; set; }
     
-    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Enrollment>()
